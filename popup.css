@@ -1,14 +1,15 @@
 :root {
-  --bg: #0b1020;
-  --panel: #141a2e;
-  --border: #243049;
-  --text: #e8ecf6;
-  --muted: #93a0bd;
-  --accent: #5b8cff;
+  /* Aligned with dmarcheck dark theme (src/views/styles.ts). */
+  --bg: #0a0a0f;
+  --panel: #18181b;
+  --border: #27272a;
+  --text: #e4e4e7;
+  --muted: #a1a1aa;
+  --accent: #f97316;
   --pass: #16a34a;
   --warn: #ca8a04;
   --fail: #dc2626;
-  --info: #5b8cff;
+  --info: #f97316;
 }
 
 * {
