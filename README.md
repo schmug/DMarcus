@@ -38,6 +38,13 @@ popup / omnibox / context menu / badge
   network traffic is DNS-over-HTTPS and the MTA-STS / security.txt policy
   fetches the scan itself requires.
 
+> **Privacy note on the toolbar badge:** the badge scans the active tab's
+> domain on tab switch, so the domains you browse generate DoH queries to
+> Cloudflare/Google. This is not telemetry (no data about *you* is sent — it's
+> ordinary DNS resolution), but it does mean browsing activity drives DNS
+> lookups. An opt-out / preferences toggle is tracked in
+> [DMarcus#8](https://github.com/schmug/DMarcus/issues/8).
+
 ## Features (MVP / Phase 1)
 
 | Surface | Behavior |
@@ -76,11 +83,14 @@ npm run icons         # regenerate PNG icons from icons/icon.svg (needs librsvg)
 
 ## Relationship to dmarcheck
 
-The analyzers, scoring, tag parser, and domain normalizer are copied
-unmodified from [schmug/dmarcheck](https://github.com/schmug/dmarcheck)
-(MIT). Only `src/dns/client.ts` and `src/orchestrator.ts` (Sentry stripped)
-diverge, plus the extension layer in `src/ext/`. A future follow-up migrates
-the shared core to a `packages/core` monorepo package instead of vendoring.
+The analyzers, scoring, tag parser, and domain normalizer are copied from
+[schmug/dmarcheck](https://github.com/schmug/dmarcheck) (MIT) with only one
+mechanical change — `.js` import extensions are stripped for `moduleResolution:
+bundler`. These files are pinned out of `biome` (see `biome.json`) so they
+stay byte-for-byte aligned with upstream. The genuine platform divergence is
+just `src/dns/client.ts` (DoH adapter) and `src/orchestrator.ts` (Sentry
+stripped), plus the extension layer in `src/ext/`. [DMarcus#7](https://github.com/schmug/DMarcus/issues/7)
+tracks migrating the shared core to a `packages/core` package.
 
 ## License
 

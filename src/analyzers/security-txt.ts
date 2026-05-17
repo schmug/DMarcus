@@ -1,4 +1,8 @@
-import type { SecurityTxtFields, SecurityTxtResult, Validation } from "./types";
+import type {
+  SecurityTxtFields,
+  SecurityTxtResult,
+  Validation,
+} from "./types";
 
 // RFC 9116 — security.txt. Informational analyzer (status always "info");
 // does not affect the letter grade. security.txt is general domain-security

@@ -7,7 +7,16 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "includes": ["src/**", "test/**", "scripts/**"]
+    "includes": [
+      "src/**",
+      "test/**",
+      "scripts/**",
+      "!src/analyzers/**",
+      "!src/shared/scoring.ts",
+      "!src/shared/parse-tags.ts",
+      "!src/shared/domain.ts",
+      "!src/dns/types.ts"
+    ]
   },
   "formatter": {
     "enabled": true,

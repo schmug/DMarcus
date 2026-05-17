@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "DMarcus — dmarc.mx Email Security Checker",
   "version": "0.1.0",
-  "description": "Check any domain's email security (DMARC, SPF, DKIM, BIMI, MX, MTA-STS) entirely client-side via DNS-over-HTTPS. No server, no rate limits.",
+  "description": "Check any domain's email security (DMARC, SPF, DKIM, BIMI, MX, MTA-STS) client-side via DNS-over-HTTPS. No server, no tracking.",
   "permissions": ["storage", "activeTab", "tabs", "contextMenus"],
   "host_permissions": [
     "https://cloudflare-dns.com/*",

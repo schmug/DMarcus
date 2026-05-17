@@ -81,7 +81,7 @@ function render(result: ScanResult, cached: boolean): void {
   );
   const meta = el("div", { class: "grade-meta" });
   meta.append(el("strong", { text: result.domain }));
-  const scoreLine = el("div", { text: result.breakdown.tier });
+  const scoreLine = el("div", { text: result.breakdown.tierReason });
   if (cached) scoreLine.append(el("span", { class: "cached", text: "cached" }));
   meta.append(scoreLine);
   row.append(meta);
