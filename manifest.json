@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "DMarcus — dmarc.mx Email Security Checker",
+  "version": "0.1.0",
+  "description": "Check any domain's email security (DMARC, SPF, DKIM, BIMI, MX, MTA-STS) entirely client-side via DNS-over-HTTPS. No server, no rate limits.",
+  "permissions": ["storage", "activeTab", "tabs", "contextMenus"],
+  "host_permissions": [
+    "https://cloudflare-dns.com/*",
+    "https://dns.google/*",
+    "https://*/.well-known/mta-sts.txt",
+    "https://*/.well-known/security.txt",
+    "https://*/security.txt"
+  ],
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "DMarcus — check email security",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "omnibox": {
+    "keyword": "dmrc"
+  }
+}

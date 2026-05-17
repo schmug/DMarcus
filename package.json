@@ -1,0 +1,23 @@
+{
+  "name": "dmarcus",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Companion Chrome extension for dmarc.mx — client-side email security scanning via DNS-over-HTTPS.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "icons": "node scripts/gen-icons.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "biome check src/ test/",
+    "lint:fix": "biome check --write src/ test/"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.10",
+    "@types/chrome": "^0.0.287",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

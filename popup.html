@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DMarcus</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="bar">
+      <img src="icons/icon-32.png" alt="" class="logo" width="22" height="22" />
+      <h1>DMarcus</h1>
+      <span class="tag">client-side · DoH</span>
+    </header>
+
+    <form id="scan-form">
+      <input
+        id="domain"
+        type="text"
+        placeholder="example.com"
+        autocomplete="off"
+        autofocus
+        spellcheck="false"
+      />
+      <button id="scan-btn" type="submit">Scan</button>
+    </form>
+
+    <main id="result" hidden></main>
+    <p id="status" class="status" hidden></p>
+
+    <section id="history-wrap" hidden>
+      <h2>Recent</h2>
+      <ul id="history"></ul>
+    </section>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
