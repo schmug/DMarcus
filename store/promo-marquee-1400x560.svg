@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 560">
+  <rect width="1400" height="560" fill="#0a0a0f"/>
+  <g transform="translate(170 175) scale(1.3)">
+  <g>
+    <text x="40" y="100" font-family="monospace" font-size="180" fill="#f97316" text-anchor="middle">@</text>
+    <circle cx="0" cy="10" r="22" fill="#ffffff"/>
+    <circle cx="75" cy="10" r="22" fill="#ffffff"/>
+    <circle cx="5" cy="16" r="11" fill="#0a0a0f"/>
+    <circle cx="80" cy="16" r="11" fill="#0a0a0f"/>
+    <rect x="-10" y="160" width="16" height="32" rx="6" fill="#ea580c"/>
+    <rect x="30" y="160" width="16" height="26" rx="6" fill="#ea580c"/>
+    <rect x="70" y="160" width="16" height="32" rx="6" fill="#ea580c"/>
+  </g></g>
+  <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-weight="800" fill="#e4e4e7" font-size="110" x="560" y="250">DMarcus</text>
+  <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" fill="#a1a1aa" font-size="38" x="564" y="320">Email security scanning, entirely client-side</text>
+  <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" fill="#f97316" font-size="32" x="564" y="384">Companion to dmarc.mx — no server, no tracking</text>
+</svg>

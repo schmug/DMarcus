@@ -1,23 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#5b8cff"/>
-      <stop offset="1" stop-color="#2f5fe0"/>
-    </linearGradient>
-  </defs>
-  <rect width="128" height="128" rx="26" fill="#0b1020"/>
-  <!-- DMarcus: a friendly shield-creature guarding the mail -->
-  <path d="M64 16 L104 30 V66 C104 92 86 108 64 116 C42 108 24 92 24 66 V30 Z"
-        fill="url(#g)" stroke="#9db8ff" stroke-width="3"/>
-  <!-- envelope -->
-  <rect x="40" y="52" width="48" height="34" rx="5" fill="#0b1020"/>
-  <path d="M40 56 L64 73 L88 56" fill="none" stroke="#9db8ff" stroke-width="4" stroke-linecap="round"/>
-  <!-- eyes -->
-  <circle cx="54" cy="40" r="6" fill="#fff"/>
-  <circle cx="74" cy="40" r="6" fill="#fff"/>
-  <circle cx="55" cy="41" r="2.6" fill="#0b1020"/>
-  <circle cx="75" cy="41" r="2.6" fill="#0b1020"/>
-  <!-- check -->
-  <path d="M55 69 L62 76 L75 61" fill="none" stroke="#16a34a" stroke-width="6"
-        stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- DMarcus — matches the dmarcheck favicon brand (src/views/favicon.ts /
+       scripts/generate-icons.mjs): near-black rounded square, monospace
+       orange @ with two googly eyes. Scaled from the 100×100 source. -->
+  <rect width="128" height="128" rx="20" fill="#0a0a0f"/>
+  <text x="64" y="105" font-family="monospace" font-size="115" fill="#f97316" text-anchor="middle">@</text>
+  <circle cx="47" cy="49" r="13" fill="white" stroke="#f97316" stroke-width="3.2"/>
+  <circle cx="78" cy="49" r="13" fill="white" stroke="#f97316" stroke-width="3.2"/>
+  <circle cx="49" cy="50" r="6.4" fill="#0a0a0f"/>
+  <circle cx="79" cy="50" r="6.4" fill="#0a0a0f"/>
 </svg>
