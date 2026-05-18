@@ -1,9 +1,9 @@
 import type { ScanResult } from "../analyzers/types";
 import { normalizeDomain } from "../shared/domain";
 import {
-  DMARC_MX_REPORT_BASE,
   gradeColor,
   type HistoryEntry,
+  reportUrl,
   type ScanResponse,
 } from "./shared";
 
@@ -107,7 +107,7 @@ function render(result: ScanResult, cached: boolean): void {
     class: "report-link",
     text: "View full report on dmarc.mx →",
   }) as HTMLAnchorElement;
-  link.href = `${DMARC_MX_REPORT_BASE}/${encodeURIComponent(result.domain)}`;
+  link.href = reportUrl(result.domain);
   link.target = "_blank";
   link.rel = "noopener";
   resultEl.append(link);
