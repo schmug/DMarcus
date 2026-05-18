@@ -2,6 +2,16 @@ import type { ScanResult } from "../analyzers/types";
 
 export const DMARC_MX_REPORT_BASE = "https://dmarc.mx";
 
+/**
+ * Canonical dmarc.mx report URL for a domain. dmarcheck serves the report at
+ * `/check?domain=<domain>` (see dmarcheck src/index.ts sitemap + views/html.ts);
+ * a bare `/<domain>` path 404s. Always go through this helper so the path and
+ * encoding stay consistent across popup, context menu, and omnibox.
+ */
+export function reportUrl(domain: string): string {
+  return `${DMARC_MX_REPORT_BASE}/check?domain=${encodeURIComponent(domain)}`;
+}
+
 export interface ScanRequest {
   type: "scan";
   domain: string;

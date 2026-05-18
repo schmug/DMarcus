@@ -2,9 +2,9 @@ import type { ScanResult } from "../analyzers/types";
 import { scan } from "../orchestrator";
 import { normalizeDomain } from "../shared/domain";
 import {
-  DMARC_MX_REPORT_BASE,
   gradeColor,
   type HistoryEntry,
+  reportUrl,
   type ScanRequest,
   type ScanResponse,
 } from "./shared";
@@ -178,7 +178,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
   if (!domain) return;
   // Prewarm the cache, then open the full report on dmarc.mx.
   scanCached(domain).catch(() => {});
-  chrome.tabs.create({ url: `${DMARC_MX_REPORT_BASE}/${domain}` });
+  chrome.tabs.create({ url: reportUrl(domain) });
 });
 
 // ---- Omnibox: `dmrc example.com` --------------------------------------------
@@ -200,5 +200,5 @@ chrome.omnibox.onInputEntered.addListener((input) => {
   const domain = normalizeDomain(input);
   if (!domain) return;
   scanCached(domain).catch(() => {});
-  chrome.tabs.create({ url: `${DMARC_MX_REPORT_BASE}/${domain}` });
+  chrome.tabs.create({ url: reportUrl(domain) });
 });
